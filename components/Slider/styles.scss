@@ -1,0 +1,270 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animation.scss';
+
+:global {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 0 3px;
+      margin: 0 3px !important;
+      background-color: $white;
+    }
+    .swiper-pagination-bullet-active {
+      background: $linear-light-blue;
+    }
+  }
+  .swiper-container {
+    max-width: 540px;
+    overflow: visible;
+  }
+}
+
+.carouselWrapper {
+  position: relative;
+  padding: 30px 0;
+  background: url(https://coingeek.com/wp-content/themes/cg_understrap/assets/images/CG_Homepage-3-BGFlat.jpg)
+    no-repeat top center $medium-gray;
+  background-size: 100% auto;
+  overflow: hidden;
+  .carouselHeader {
+    @extend .gridCenter;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .logoWrapper {
+      padding: 0 15px;
+      border-right: 1px solid $white;
+      max-width: 223px;
+      justify-self: flex-end;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .subTitleWrapper {
+      padding-left: 15px;
+      h2 {
+        color: $white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+  .carouselContent {
+    .carouselItem {
+      article {
+        @extend .flexCenter;
+        flex-direction: column;
+        padding: 0 15px;
+        opacity: 0;
+        // max-width: 510px;
+        .articleImage {
+          img {
+            max-width: 100%;
+            border-radius: 0 10px;
+            height: auto;
+          }
+        }
+        .articleContentWrapper {
+          margin: -20px 1rem 0 1rem;
+
+          .articleContent {
+            background-color: $white;
+            border-radius: 0 10px;
+            padding: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            .meta {
+              font-size: 0.65rem;
+              text-transform: uppercase;
+              font-weight: 300;
+              .category {
+                padding-left: 0.5rem;
+                position: relative;
+                &::before {
+                  content: '';
+                  left: 0;
+                  width: 2px;
+                  height: 120%;
+                  position: absolute;
+                  top: -10%;
+                  background: $linear-light-blue;
+                }
+              }
+              .date {
+                padding-left: 0.5rem;
+                color: $light-blue;
+              }
+            }
+            .title {
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 140%;
+            }
+            .subTitle {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      &.carouselActive {
+        article {
+          opacity: 1;
+          .articleImage {
+            animation: fadeInRight 0.6s ease-out;
+          }
+          .articleContentWrapper {
+            animation: fadeInLeft 0.6s ease-out;
+            .articleContent {
+              animation: fadeInLeft 0.6s ease-out;
+            }
+          }
+        }
+      }
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 200%;
+    background-repeat: repeat-x;
+    background-position: 50% calc(100% + 7px);
+    background-size: 50%;
+  }
+  &::before {
+    right: 0;
+    opacity: 0.4;
+    height: 140px;
+    background-size: 30%;
+    background-image: url(https://front-end-noobs.com/jecko/img/wave-bot.png);
+    animation: moveRight 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+  &::after {
+    left: 0;
+    opacity: 0.95;
+    height: 160px;
+    background-image: url(https://front-end-noobs.com/jecko/img/wave-mid.png);
+    animation: moveLeft 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+}
+
+// breakpoint XS
+@include breakpoint(xs) {
+  .carouselWrapper {
+    .carouselContent {
+      .carouselItem {
+        article {
+          .articleImage {
+            max-width: 460px;
+          }
+          .articleContentWrapper {
+            margin: -5px 1rem 0 2rem;
+
+            .articleContent {
+              width: 120%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// breakpoint sm
+@include breakpoint(sm) {
+  :global {
+    .swiper-container {
+      max-width: 690px;
+    }
+  }
+  .carouselWrapper {
+    .carouselContent {
+      .carouselItem {
+        min-height: 300px;
+
+        article {
+          flex-direction: row-reverse;
+          padding: 0;
+          position: relative;
+          .articleImage {
+            max-width: 460px;
+            img {
+              max-width: 460px;
+              right: 0;
+            }
+          }
+          .articleContentWrapper {
+            margin: 0 -2rem 0 2rem;
+            .articleContent {
+              padding: 1.5rem;
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// breakpoint MD
+@include breakpoint(md) {
+  :global {
+    .swiper-container {
+      max-width: 930px;
+    }
+  }
+  .carouselWrapper {
+    .carouselContent {
+      .carouselItem {
+        article {
+          .articleImage {
+            max-width: 620px;
+            img {
+              max-width: 620px;
+            }
+          }
+          .articleContentWrapper {
+            margin: 0 -3rem 0 2rem;
+            .articleContent {
+              width: 372px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// breakpoint XS
+@include breakpoint(lg) {
+  :global {
+    .swiper-container {
+      max-width: 1100px;
+    }
+  }
+  .carouselWrapper {
+    .carouselContent {
+      .carouselItem {
+        article {
+          .articleImage {
+            img {
+              max-width: 740px;
+            }
+          }
+          .articleContentWrapper {
+            margin: 0 -4rem 0 2rem;
+            .articleContent {
+              width: 445px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
