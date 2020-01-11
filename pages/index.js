@@ -4,12 +4,15 @@ import Nav from '../components/nav'
 
 import HomeLayout from '../layouts/HomeLayout'
 import Slider from '../components/Slider'
+import FooterHome from '../components/FooterHome'
 
 const Home = () => {
   return (
     <HomeLayout>
-      {/* <div>Home Page</div> */}
       <Slider />
+      <div>Home Page</div>
+      <div style={{ height: 900 }}></div>
+      <FooterHome />
     </HomeLayout>
   )
 }

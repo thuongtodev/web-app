@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './styles.scss'
 
+import logo01 from './assets/logo01.svg'
+import logo from './assets/logo.svg'
+import logo02 from './assets/logo02.svg'
+import logo03 from './assets/logo03.svg'
+
 const Footer = () => {
   return (
     <div className={styles.wrapper}>
@@ -46,7 +51,7 @@ const Footer = () => {
                 <div className="col-12 col-md-auto order-1 order-md-2 text-center">
                   <div className={styles.imageLogo}>
                     <img
-                      src="https://coingeek.com/wp-content/uploads/2018/11/logo.svg"
+                      src={logo}
                       className={styles.customLogo}
                       alt="CoinGeek"
                     />
@@ -82,7 +87,7 @@ const Footer = () => {
               <div className="row align-items-center justify-content-center footer-partners text-uppercase text-white">
                 <div className="col-3 col-md-2">
                   <img
-                    src="https://coingeek.com/wp-content/uploads/2018/11/CalvinAyre-01-2.svg"
+                    src={logo01}
                     alt=""
                     style={{ width: '75%' }}
                     className=" img-fluid partners-logo lazyload-loaded"
@@ -90,7 +95,7 @@ const Footer = () => {
                 </div>
                 <div className="col-3 col-md-2">
                   <img
-                    src="https://coingeek.com/wp-content/uploads/2018/11/AyreMedia-01.svg"
+                    src={logo02}
                     alt=""
                     style={{ width: '75%' }}
                     className=" img-fluid partners-logo lazyload-loaded"
@@ -98,7 +103,7 @@ const Footer = () => {
                 </div>
                 <div className="col-3 col-md-2">
                   <img
-                    src="https://coingeek.com/wp-content/uploads/2018/11/AyreGroup-01.svg"
+                    src={logo02}
                     alt=""
                     style={{ width: '75%' }}
                     className=" img-fluid partners-logo lazyload-loaded"
@@ -106,7 +111,7 @@ const Footer = () => {
                 </div>
                 <div className="col-3 col-md-2">
                   <img
-                    src="https://coingeek.com/wp-content/uploads/2018/11/CalvinAyreFoundation-01.svg"
+                    src={logo03}
                     alt=""
                     style={{ width: '75%' }}
                     className=" img-fluid partners-logo lazyload-loaded"

@@ -9,7 +9,6 @@ const HomeLayout = ({ children }) => {
       <Meta />
       <Header />
       {children}
-      <div style={{ height: 900 }}></div>
       <Footer />
     </div>
   )
