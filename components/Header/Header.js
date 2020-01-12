@@ -8,7 +8,7 @@ import zh from './assets/zh.png'
 import Dropdown from './components/Dropdown'
 import { reducer } from '../../utils/functions'
 
-const Header = () => {
+const HeaderWeb = () => {
   const initState = {
     languages: [
       {
@@ -69,4 +69,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderWeb

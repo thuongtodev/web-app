@@ -11,7 +11,7 @@ const Home = () => {
     <HomeLayout>
       <Slider />
       <div>Home Page</div>
-      <div style={{ height: 900 }}></div>
+      <div style={{ height: 200 }}></div>
       <FooterHome />
     </HomeLayout>
   )
