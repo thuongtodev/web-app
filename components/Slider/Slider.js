@@ -70,7 +70,7 @@ const Slider = props => {
                     category,
                     datetime,
                     title,
-                    subTitle,
+                    description,
                   } = item
 
                   return (
@@ -104,18 +104,14 @@ const Slider = props => {
                                 datetime={datetime}
                               />
                               <header className="articleHeader">
-                                <a
-                                  href={url}
-                                  className="text-body font0_9 text-decoration-none"
-                                >
+                                <a href={url} className="text-body font0_9">
                                   <h2 className="articleTitle">{title}</h2>
                                 </a>
                               </header>
-                              <a
-                                href={url}
-                                className="text-body font0_8 text-decoration-none"
-                              >
-                                <p className="font0_8 text-dark">{subTitle}</p>
+                              <a href={url} className="text-body font0_8">
+                                <p className="font0_8 text-dark">
+                                  {description}
+                                </p>
                               </a>
                             </div>
                           </div>

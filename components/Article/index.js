@@ -1,24 +1,28 @@
+import classname from 'classnames'
 import ArticleMeta from '../ArticleMeta'
 
 const Article = props => {
-  const { datetime, title, subTitle, url, category, image } = props
+  const { datetime, title, description, url, category, image, isSmall } = props
+  const headerClasses = classname('articleTitle', {
+    font0_8: isSmall,
+    font1_0: !isSmall,
+  })
+  const imageClasses = classname('cgRadius img-fluid  lazyload-loaded', {
+    'w-100': !isSmall,
+  })
 
   return (
     <article>
       <a href={url} className="d-block my-3">
-        <img
-          className="cgRadius img-fluid w-100 lazyload-loaded"
-          alt={title}
-          src={image}
-        />
+        <img className={imageClasses} alt={title} src={image} />
       </a>
       <ArticleMeta datetime={datetime} category={category} />
       <header>
-        <a href={url} className="text-body font0_9 text-decoration-none">
-          <h2 className="articleTitle font1_0 fontWeight600">{title}</h2>
+        <a href={url}>
+          <h2 className={headerClasses}>{title}</h2>
         </a>
       </header>
-      <p className="font0_8 text-dark">{subTitle}</p>
+      {!isSmall && <p className="font0_8 text-dark">{description}</p>}
     </article>
   )
 }

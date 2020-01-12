@@ -41,6 +41,8 @@ BREAKPOINTS
 :global {
   a {
     color: #000;
+    cursor: pointer;
+    text-decoration: none !important;
     &:hover {
       color: #000;
     }
