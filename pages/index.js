@@ -5,13 +5,13 @@ import Nav from '../components/nav'
 import HomeLayout from '../layouts/HomeLayout'
 import Slider from '../components/Slider'
 import FooterHome from '../components/FooterHome'
+import LastestNewsBlock from '../components/LastestNewsBlock'
 
 const Home = () => {
   return (
     <HomeLayout>
       <Slider />
-      <div>Home Page</div>
-      <div style={{ height: 200 }}></div>
+      <LastestNewsBlock />
       <FooterHome />
     </HomeLayout>
   )
