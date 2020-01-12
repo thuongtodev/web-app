@@ -30,7 +30,7 @@ const mockSlider = [
     title: 'Happy Birthday Bitcoin! 11 years since first software release',
     image:
       'https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://coingeek.com/wp-content/uploads/2020/01/happy-birthday-bitcoin-11-years-since-first-software-release.jpg',
-    subTitle:
+    description:
       'Bitcoin is officially 11 years old today, thedateSatoshi Nakamoto released version 0.1 of the Bitcoin protocol software.',
     url:
       'https://coingeek.com/happy-birthday-bitcoin-11-years-since-first-software-release/',
