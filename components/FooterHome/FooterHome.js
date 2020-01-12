@@ -11,6 +11,7 @@ import {
   FaAngleUp,
 } from 'react-icons/fa'
 import styles from './styles.scss'
+import InfoForm from './components/InfoForm'
 
 const FooterHome = () => {
   return (
@@ -188,6 +189,10 @@ const FooterHome = () => {
                   </div>
                 </li>
               </ul>
+            </div>
+
+            <div className="footer__newsletters">
+              <InfoForm />
             </div>
           </div>
         </div>
