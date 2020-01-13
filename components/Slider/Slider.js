@@ -1,5 +1,6 @@
 import React from 'react'
 import Swiper from 'react-id-swiper'
+import ArticleMeta from '../ArticleMeta'
 import sliders from './mockSlider.js'
 import 'swiper/swiper.scss'
 import styles from './styles.scss'
@@ -22,44 +23,107 @@ const Slider = props => {
   }
 
   return (
-    <div className={styles.carouselWrapper}>
-      <header className={styles.carouselHeader}>
-        <div className={styles.logoWrapper}>
-          <img
-            src="https://coingeek.com/wp-content/uploads/2018/11/logo.svg"
-            alt="CoinGeek"
-          />
-        </div>
-        <div className={styles.subTitleWrapper}>
-          <h2 title="CoinGeek | The Bitcoin Beat">The bitcoin beat</h2>
-        </div>
-      </header>
-      <div className={styles.carouselContent}>
-        <Swiper {...params}>
-          {sliders.map(item => {
-            const { id, url, image, category, date, title, subTitle } = item
-
-            return (
-              <div className={styles.carouselItem} key={id}>
-                <article>
-                  <div className={styles.articleImage}>
-                    <img src={image} />
-                  </div>
-                  <div className={styles.articleContentWrapper}>
-                    <div className={styles.articleContent}>
-                      <div className={styles.meta}>
-                        <span className={styles.category}>{category}</span>
-                        <span className={styles.date}>{date}</span>
-                      </div>
-                      <h2 className={styles.title}>{title}</h2>
-                      <p className={styles.subTitle}>{subTitle}</p>
-                    </div>
-                  </div>
-                </article>
+    <div className={styles.sliderWrapper}>
+      <div className="container">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-12 col-md-10 col-lg-7">
+            <header
+              className={`${styles.sliderHeader} overflow-hidden position-relative my-3`}
+            >
+              <div className="row align-items-center justify-content-center my-3">
+                <div
+                  className={`col-6 col-md-6 text-right pr-md-0 ${styles.firstDivider}`}
+                >
+                  <a
+                    href="https://coingeek.com/"
+                    className={styles.customLogoLink}
+                    rel="home"
+                  >
+                    <img
+                      src="https://coingeek.com/wp-content/uploads/2018/11/logo.svg"
+                      className="lazyload-loaded"
+                      alt="CoinGeek"
+                    />
+                  </a>
+                </div>
+                <div className="col-6 col-md-6 text-left">
+                  <h1
+                    className="text-white text-uppercase font1_0 font-md1_75 my-0"
+                    title="CoinGeek | The Bitcoin Beat"
+                  >
+                    The Bitcoin Beat
+                  </h1>
+                </div>
               </div>
-            )
-          })}
-        </Swiper>
+            </header>
+          </div>
+        </div>
+        <div className="row align-items-start justify-content-between">
+          <div className="position-relative">
+            <div className="col-12">
+              <Swiper {...params}>
+                {sliders.map(item => {
+                  const {
+                    id,
+                    url,
+                    image,
+                    category,
+                    datetime,
+                    title,
+                    description,
+                  } = item
+
+                  return (
+                    <div
+                      className={`${styles.sliderItem} d-inline-block h-100 w-100`}
+                      key={id}
+                    >
+                      <article
+                        id={id}
+                        className="d-block w-100 h-100 position-relative"
+                      >
+                        <div className="row align-items-center justify-content-between mx-auto">
+                          <div className="col-12 order-md-last col-md-8 px-0">
+                            <a
+                              href={url}
+                              className={`${styles.sliderImage} float-none float-md-right d-block position-relative`}
+                            >
+                              <img
+                                className="cgRadius img-fluid lazyload-loaded"
+                                alt={title}
+                                src={image}
+                              />
+                            </a>
+                          </div>
+                          <div className="col-11 order-md-first col-md-4 px-0 mx-auto">
+                            <div
+                              className={`${styles.sliderContent} cgRadius mx-auto bg-white p-3 p-md-4 overflow-hidden shadow`}
+                            >
+                              <ArticleMeta
+                                category={category}
+                                datetime={datetime}
+                              />
+                              <header className="articleHeader">
+                                <a href={url} className="text-body font0_9">
+                                  <h2 className="articleTitle">{title}</h2>
+                                </a>
+                              </header>
+                              <a href={url} className="text-body font0_8">
+                                <p className="font0_8 text-dark">
+                                  {description}
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  )
+                })}
+              </Swiper>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
