@@ -53,7 +53,6 @@ const HeaderMobile = () => {
         </div>
         <div className={styles.rightContent}>
           {!state.isOpenMenu && <FaSearch />}
-          {!state.isOpenMenu && <FaSearch />}
           <Dropdown list={state.languages} />
         </div>
       </div>
