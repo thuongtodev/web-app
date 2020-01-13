@@ -7,6 +7,7 @@ import Slider from '../components/Slider'
 import FooterHome from '../components/FooterHome'
 import LastestNewsBlock from '../components/LastestNewsBlock'
 import BusinessAndTechBlock from '../components/BusinessAndTechBlock'
+import ConferencesEvents from '../components/ConferencesEvents'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Slider />
       <LastestNewsBlock />
       <BusinessAndTechBlock />
+      <ConferencesEvents />
       <FooterHome />
     </HomeLayout>
   )
