@@ -2,6 +2,7 @@ import React from 'react'
 import { interviewNews, podCast, videos } from './mockInterviewsAndFeatures'
 import BlockHeader from '../BlockHeader'
 import Article from '../Article'
+import conversationIcon from '../../assets/conversationIcon.png'
 import styles from './styles.scss'
 
 const InterviewsAndFeatures = props => {
@@ -52,7 +53,7 @@ const InterviewsAndFeatures = props => {
               <div className="col-3">
                 <img
                   className="lazyload-loaded"
-                  src="https://coingeek.com/wp-content/themes/cg_understrap/assets/images/en_CG_Conversations_black.png"
+                  src={conversationIcon}
                   alt="CoinGeek Coinversations"
                 />
               </div>

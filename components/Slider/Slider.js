@@ -2,6 +2,7 @@ import React from 'react'
 import Swiper from 'react-id-swiper'
 import ArticleMeta from '../ArticleMeta'
 import sliders from './mockSlider.js'
+import cgLogo from '../../assets/cgLogo.svg'
 import 'swiper/swiper.scss'
 import styles from './styles.scss'
 
@@ -40,7 +41,7 @@ const Slider = props => {
                     rel="home"
                   >
                     <img
-                      src="https://coingeek.com/wp-content/uploads/2018/11/logo.svg"
+                      src={cgLogo}
                       className="lazyload-loaded"
                       alt="CoinGeek"
                     />

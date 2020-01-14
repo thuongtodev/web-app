@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.scss'
 
-const InfoForm = () => {
+const NewLetterForm = () => {
   return (
     <div>
       <div className={styles.halfSize}>
@@ -78,4 +78,4 @@ const InfoForm = () => {
   )
 }
 
-export default InfoForm
+export default NewLetterForm

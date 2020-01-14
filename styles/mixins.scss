@@ -53,6 +53,10 @@ BREAKPOINTS
     height: auto;
   }
 
+  .wrapper {
+    padding: 30px 0;
+  }
+
   .cgRadius {
     border-radius: 0 10px;
   }
@@ -71,8 +75,14 @@ BREAKPOINTS
   .font0_65 {
     font-size: 0.65rem;
   }
+  .font0_75 {
+    font-size: 0.75rem;
+  }
   .font1_0 {
     font-size: 1rem;
+  }
+  .font1_50 {
+    font-size: 1.5rem;
   }
   .font-md1_75 {
     @include breakpoint(md) {
