@@ -72,6 +72,7 @@ const cg_NEWS_SUB_MENU = [
       {
         title: 'Press Releases',
         url: 'https://coingeek.com/news/category/press-releases/',
+        key: 'pressReleases',
       },
       {
         title: 'Events',

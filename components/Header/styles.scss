@@ -239,9 +239,6 @@
               font-size: 24px;
               line-height: 49px;
               margin: 0 10px;
-              &:hover {
-                color: #fac161;
-              }
             }
             .tooltip {
               visibility: hidden;
@@ -255,15 +252,17 @@
               margin-left: -60px;
               border: 5px solid #000;
               border-radius: 3px;
-              -webkit-transform: translateY(-5px);
-              -moz-transform: translateY(-5px);
-              -ms-transform: translateY(-5px);
-              -o-transform: translateY(-5px);
               transform: translateY(-5px);
-              -webkit-transition: all 0.3s ease-in;
-              -o-transition: all 0.3s ease-in;
-              -moz-transition: all 0.3s ease-in;
               transition: all 0.3s ease-in;
+            }
+            &:hover {
+              a {
+                color: #fac161;
+              }
+              .tooltip {
+                visibility: visible;
+                opacity: 1;
+              }
             }
           }
         }

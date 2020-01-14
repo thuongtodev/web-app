@@ -137,23 +137,18 @@ const HeaderWeb = () => {
               <div className="col-12">
                 <div className={styles.headerSocial}>
                   <ul>
-                    {
-                      (cg_SOCIALS,
-                      cg_MENU_ITEMS.map(item => {
-                        return (
-                          <li className={styles.socialItem} key={item.type}>
-                            <a href={item.url} target="_blank">
-                              {item.component}
-                            </a>
-                            {item.tooltip && (
-                              <div className={styles.tooltip}>
-                                {item.tooltip}
-                              </div>
-                            )}
-                          </li>
-                        )
-                      }))
-                    }
+                    {cg_SOCIALS.map(item => {
+                      return (
+                        <li className={styles.socialItem} key={item.type}>
+                          <a href={item.url} target="_blank">
+                            {item.component}
+                          </a>
+                          {item.tooltip && (
+                            <div className={styles.tooltip}>{item.tooltip}</div>
+                          )}
+                        </li>
+                      )
+                    })}
                   </ul>
                   <a
                     href="#"

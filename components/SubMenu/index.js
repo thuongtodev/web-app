@@ -26,7 +26,7 @@ const SubMenu = props => {
               <ul className={styles.children}>
                 {children.map(child => {
                   return (
-                    <li className={styles.child}>
+                    <li className={styles.child} key={child.key}>
                       <a href={child.url}>{child.title}</a>
                     </li>
                   )

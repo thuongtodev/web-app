@@ -4,7 +4,7 @@ import BlockHeader from '../BlockHeader'
 import Article from '../Article'
 import styles from './styles.scss'
 
-const BusinessAndTechBlock = props => {
+const BusinessAndTech = props => {
   return (
     <div className={styles.businessAndTechWrapper}>
       <div className="container">
@@ -79,4 +79,4 @@ const BusinessAndTechBlock = props => {
   )
 }
 
-export default BusinessAndTechBlock
+export default BusinessAndTech
