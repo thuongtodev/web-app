@@ -1,8 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './styles.scss'
-
-import styles from './styles.scss'
 import logo01 from './assets/logo01.svg'
 import logo from './assets/logo.svg'
 import logo02 from './assets/logo02.svg'
