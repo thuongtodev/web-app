@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './styles.scss'
+import CgButton from '../CgButton'
 
 const NewLetterForm = () => {
   return (
-    <div>
+    <form className={styles.newLetterForm}>
       <div className={styles.halfSize}>
         <div className="_field-wrapper">
           <input
@@ -70,11 +71,9 @@ const NewLetterForm = () => {
       </div>
 
       <div className={styles.buttonWrap}>
-        <button className={styles.button} type="submit">
-          Submit
-        </button>
+        <CgButton type="submit">Submit</CgButton>
       </div>
-    </div>
+    </form>
   )
 }
 

@@ -84,8 +84,9 @@ const InterviewsAndFeatures = props => {
                       className="embed-responsive-item "
                       src={videos.videoUrl}
                       frameBorder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      // allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      autoplay={false}
                     ></iframe>
                     <noscript>
                       Video can't be loaded because JavaScript is disabled:{' '}

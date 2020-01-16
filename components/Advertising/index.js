@@ -3,7 +3,7 @@ import FullWidthHeader from '../FullWidthHeader'
 import RightSidebar from '../RightSidebar/RightSidebar'
 import { cg_ABOUT_US_SIDEBAR } from '../../constants/common'
 
-const AboutUs = props => {
+const Advertising = props => {
   const { pageTitle } = props
 
   return (
@@ -14,25 +14,23 @@ const AboutUs = props => {
           <div className="row align-items-start justify-content-between mb-5">
             <div className="col-9 col-md-9 longContent">
               <p>
-                In 2017, the Calvin Ayre Media group acquired and relaunched
-                CoinGeek.com as a cryptocurrency news site with a focus on the
-                technology of Bitcoin, now reborn as Bitcoin SV (BSV).
+                If you need to promote your company, brand, product or services,
+                CoinGeek.com offers engaging online advertising that reaches a
+                unique audience of cryptocurrency enthusiasts.
               </p>
               <p>
-                We want to provide fair coverage of the entire cryptocurrency
-                industry and highlight people and companies doing their part to
-                live up to the true vision of the Satoshi Nakamoto whitepaper.
+                We are part of the Calvin Ayre Media Group and multisite buys
+                are available on request. Banner advertisements and video
+                packages are all&nbsp;available to help target your business and
+                services directly to your audience. To find our more information
+                regarding our advertising services and rates.
               </p>
               <p>
-                If you wish to share your thoughts, ideas and opinions please
-                contact our Editor-in-Chief Bill Beatty (
-                <a className="email" href="mailto:bill@ayremedia.com">
-                  bill@ayremedia.com
+                Please email us at:&nbsp;
+                <a className="email" href="mailto:Advertise@AyreMedia.com">
+                  Advertise@AyreMedia.com
                 </a>
-                ) to submit your pitches.
               </p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
             </div>
             <div className="col-8 col-md-2">
               <RightSidebar sidebarItems={cg_ABOUT_US_SIDEBAR} />
@@ -44,4 +42,4 @@ const AboutUs = props => {
   )
 }
 
-export default AboutUs
+export default Advertising

@@ -8,10 +8,9 @@ import {
   FaLinkedinIn,
   FaWeibo,
   FaWeixin,
-  FaAngleUp,
 } from 'react-icons/fa'
+import NewLetterForm from '../NewLetterForm'
 import styles from './styles.scss'
-import InfoForm from './components/InfoForm'
 
 const FooterHome = () => {
   return (
@@ -192,7 +191,7 @@ const FooterHome = () => {
             </div>
 
             <div className="footer__newsletters">
-              <InfoForm />
+              <NewLetterForm />
             </div>
           </div>
         </div>

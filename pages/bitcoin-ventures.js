@@ -1,19 +1,21 @@
 import HomeLayout from '../layouts/HomeLayout'
-import AboutUsComponent from '../components/AboutUs'
 import LastestNewsBlock from '../components/LastestNewsBlock'
+import BitcoinVenturesComponent from '../components/BitcoinVentures'
 import NewLetterBlock from '../components/NewLetterBlock'
 
-const pageTitle =
-  'CoinGeek is your trusted source for all of the latest cryptocurrency news.'
+const pageTitle = [
+  'Bitcoin Ventures',
+  'Helping you ignite the future of bitcoin',
+]
 
-const AboutUs = () => {
+const BitcoinVentures = () => {
   return (
     <HomeLayout>
-      <AboutUsComponent pageTitle={pageTitle} />
+      <BitcoinVenturesComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />
     </HomeLayout>
   )
 }
 
-export default AboutUs
+export default BitcoinVentures

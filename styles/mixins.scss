@@ -46,6 +46,14 @@ BREAKPOINTS
     &:hover {
       color: #000;
     }
+    &.email {
+      color: #4a90e2;
+    }
+  }
+
+  .longContent > p {
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   img {

@@ -107,22 +107,70 @@ export const cg_MENU_ITEMS = [
   {
     title: 'News',
     key: 'news',
-    url: 'https://coingeek.com/news/',
+    url: '/news',
     children: cg_NEWS_SUB_MENU,
+    isExternalSite: false,
   },
   {
     title: 'Conferences',
     key: 'conferences',
     url: 'https://coingeekconference.com/',
+    isExternalSite: true,
   },
   {
     title: 'How to buy bsv?',
     key: 'howToBuyBSV',
-    url: 'https://coingeek.com/how-to-buy-bsv/',
+    url: '/how-to-buy-bsv',
+    isExternalSite: false,
   },
   {
     title: 'Ventures',
     key: 'ventures',
-    url: 'https://coingeek.com/ventures/',
+    url: '/bitcoin-ventures',
+    isExternalSite: false,
+  },
+]
+
+export const cg_ABOUT_US_SIDEBAR = [
+  {
+    title: 'ABOUT US',
+    subTitle: 'Learn more',
+    url: '/about-us',
+  },
+  {
+    title: 'OUR WRITERS',
+    subTitle: 'Learn more',
+    url: '/authors',
+  },
+  {
+    title: 'CONTACT US',
+    subTitle: 'Get in touch',
+    url: '/contact-us',
+  },
+]
+
+export const cg_POLICY_SIDEBAR = [
+  {
+    title: 'LEGAL',
+    subTitle: 'Learn more',
+    url: '/privacy-policy',
+  },
+  {
+    title: 'ADVERTISING',
+    subTitle: 'Learn more',
+    url: '/advertising',
+  },
+]
+
+export const cg_TERMS_SIDEBAR = [
+  {
+    title: 'Privacy Policy',
+    subTitle: 'Privacy Policy',
+    url: '/privacy-policy',
+  },
+  {
+    title: 'CONTACT US',
+    subTitle: 'Contact us',
+    url: '/contact-us',
   },
 ]

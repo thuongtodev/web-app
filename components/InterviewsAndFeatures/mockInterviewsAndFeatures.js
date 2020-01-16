@@ -36,7 +36,7 @@ export const videos = {
   url:
     'https://coingeek.com/video/jimmy-nguyen-talks-bitcoin-sv-and-how-its-changing-the-commerce-world-video/',
   videoUrl:
-    'https://www.youtube-nocookie.com/embed/JWhYqucphQs?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3&color=red',
+    'https://www.youtube-nocookie.com/embed/JWhYqucphQs?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&color=red',
   title:
     'Jimmy Nguyen talks Bitcoin SV and how it’s changing the commerce world',
   description:

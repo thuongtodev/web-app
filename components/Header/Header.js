@@ -51,7 +51,7 @@ const HeaderWeb = () => {
           <nav className={styles.navigator}>
             <ul className={styles.mainMenu}>
               {cg_MENU_ITEMS.map(item => {
-                const { title, url, children, key } = item
+                const { title, url, children, key, isExternalSite } = item
                 return (
                   <li
                     key={key}
@@ -61,9 +61,16 @@ const HeaderWeb = () => {
                     onMouseOver={() => toggleSubMenu(key)}
                     onMouseOut={() => toggleSubMenu(null)}
                   >
-                    <a href={url} className={styles.a}>
-                      {title}
-                    </a>
+                    {!isExternalSite && (
+                      <Link href={url}>
+                        <a className={styles.a}>{title}</a>
+                      </Link>
+                    )}
+                    {isExternalSite && (
+                      <a href={url} className={styles.a}>
+                        {title}
+                      </a>
+                    )}
                     {children && (
                       <SubMenu
                         items={children}

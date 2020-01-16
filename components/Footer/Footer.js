@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './styles.scss'
 
 import logo01 from './assets/logo01.svg'
@@ -22,64 +23,92 @@ const Footer = () => {
                     id="menu-footer-menu-left"
                     className="nav flex-column flex-sm-row justify-content-around text-center"
                   >
-                    <li
-                      id="menu-item-19810"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19810"
-                    >
-                      About Us
-                    </li>
-                    <li
-                      id="menu-item-19823"
-                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-19823"
-                    >
-                      About Calvin Ayre
-                    </li>
-                    <li
-                      id="menu-item-19811"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19811"
-                    >
-                      Our Team
-                    </li>
-                    <li
-                      id="menu-item-19812"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19812"
-                    >
-                      Advertising
-                    </li>
+                    <Link href="/about-us">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19810"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19810"
+                        >
+                          About Us
+                        </li>
+                      </a>
+                    </Link>
+                    <a className="text-white" href="https://ayre.org/">
+                      <li
+                        id="menu-item-19823"
+                        className="menu-item menu-item-type-custom menu-item-object-custom menu-item-19823"
+                      >
+                        About Calvin Ayre
+                      </li>
+                    </a>
+                    <Link href="/authors">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19811"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19811"
+                        >
+                          Our Team
+                        </li>
+                      </a>
+                    </Link>
+                    <Link href="/advertising">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19812"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19812"
+                        >
+                          Advertising
+                        </li>
+                      </a>
+                    </Link>
                   </ul>
                 </div>
                 <div className="col-12 col-md-auto order-1 order-md-2 text-center">
-                  <div className={styles.imageLogo}>
-                    <img
-                      src={logo}
-                      className={styles.customLogo}
-                      alt="CoinGeek"
-                    />
-                  </div>
+                  <Link href="/">
+                    <div className={styles.imageLogo}>
+                      <img
+                        src={logo}
+                        className={styles.customLogo}
+                        alt="CoinGeek"
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div className="col-12 col-md order-3 order-md-3">
                   <ul
                     id="menu-footer-menu-right"
                     className="nav flex-column flex-sm-row justify-content-around text-center"
                   >
-                    <li
-                      id="menu-item-19814"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-19814"
-                    >
-                      Privacy Policy
-                    </li>
-                    <li
-                      id="menu-item-19815"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19815"
-                    >
-                      Terms of Use
-                    </li>
-                    <li
-                      id="menu-item-19816"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19816"
-                    >
-                      Contact us
-                    </li>
+                    <Link href="/privacy-policy">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19814"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-19814"
+                        >
+                          Privacy Policy
+                        </li>
+                      </a>
+                    </Link>
+                    <Link href="/terms-of-use">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19815"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19815"
+                        >
+                          Terms of Use
+                        </li>
+                      </a>
+                    </Link>
+                    <Link href="/contact-us">
+                      <a className="text-white">
+                        <li
+                          id="menu-item-19816"
+                          className="menu-item menu-item-type-post_type menu-item-object-page menu-item-19816"
+                        >
+                          Contact us
+                        </li>
+                      </a>
+                    </Link>
                   </ul>
                 </div>
               </div>

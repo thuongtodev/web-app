@@ -1,19 +1,18 @@
 import HomeLayout from '../layouts/HomeLayout'
-import AboutUsComponent from '../components/AboutUs'
 import LastestNewsBlock from '../components/LastestNewsBlock'
+import TermsOfUseComponent from '../components/TermsOfUse'
 import NewLetterBlock from '../components/NewLetterBlock'
 
-const pageTitle =
-  'CoinGeek is your trusted source for all of the latest cryptocurrency news.'
+const pageTitle = 'Terms of use'
 
-const AboutUs = () => {
+const TermsOfUse = () => {
   return (
     <HomeLayout>
-      <AboutUsComponent pageTitle={pageTitle} />
+      <TermsOfUseComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />
     </HomeLayout>
   )
 }
 
-export default AboutUs
+export default TermsOfUse
