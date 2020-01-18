@@ -56,50 +56,59 @@ export const cg_SOCIALS = [
 const cg_NEWS_SUB_MENU = [
   {
     title: 'News',
-    url: 'https://coingeek.com/news/',
+    url: '/news',
     key: 'news',
+    isExternalSide: false,
     children: [
       {
         title: 'Business',
-        url: 'https://coingeek.com/news/category/business/',
+        url: '/news/category/business',
         key: 'business',
+        isExternalSide: false,
       },
       {
         title: 'Tech',
-        url: 'https://coingeek.com/news/category/tech/',
+        url: '/news/category/tech',
         key: 'tech',
+        isExternalSide: false,
       },
       {
         title: 'Press Releases',
-        url: 'https://coingeek.com/news/category/press-releases/',
+        url: '/news/category/press-releases',
         key: 'pressReleases',
+        isExternalSide: false,
       },
       {
         title: 'Events',
-        url: 'https://coingeek.com/news/category/events/',
+        url: '/news/category/events',
         key: 'events',
+        isExternalSide: false,
       },
       {
         title: 'Interviews',
-        url: 'https://coingeek.com/news/category/interviews/',
+        url: '/news/category/interviews',
         key: 'interviews',
+        isExternalSide: false,
       },
       {
         title: 'Videos',
-        url: 'https://coingeek.com/news/category/videos/',
+        url: '/news/category/videos',
         key: 'videos',
+        isExternalSide: false,
       },
     ],
   },
   {
     title: 'Authors',
     key: 'authors',
-    url: 'https://coingeek.com/authors/',
+    url: '/authors',
+    isExternalSide: false,
   },
   {
     title: 'Bitcoin Guide',
     key: 'bitcoinGuide',
     url: 'https://bitcoinsv.io/services/',
+    isExternalSide: true,
   },
 ]
 

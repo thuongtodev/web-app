@@ -44,7 +44,7 @@ const FullWidthHeader = props => {
 
 FullWidthHeader.propTypes = {
   isPaddingTop: PropTypes.bool,
-  title: PropTypes.instanceOf(Array, String),
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 }
 FullWidthHeader.defaultProps = {
   isPaddingTop: true,

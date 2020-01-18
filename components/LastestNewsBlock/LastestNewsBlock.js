@@ -4,6 +4,7 @@ import lastestNews, { mockAds } from './mockLastNews'
 import BlockHeader from '../BlockHeader'
 import Article from '../Article'
 import styles from './styles.scss'
+import GridNews from '../GridNews'
 
 const LastestNewsBlock = props => {
   const { limit, isShowAds } = props
@@ -44,22 +45,7 @@ const LastestNewsBlock = props => {
             </div>
           </div>
         )}
-        {!isShowAds && (
-          <>
-            <BlockHeader title="Lastest Bitcoin News" />
-            <div className="row align-items-start justify-content-between">
-              {lastestNews.map((item, index) => {
-                if (index >= limit) return null
-                const { id } = item
-                return (
-                  <div key={id} className="col-6 col-md-4 col-lg-3 mb-3">
-                    <Article {...item} />
-                  </div>
-                )
-              })}
-            </div>
-          </>
-        )}
+        {!isShowAds && <GridNews news={lastestNews} limit={limit} />}
       </div>
     </div>
   )

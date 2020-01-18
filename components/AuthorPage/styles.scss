@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.authorProfile {
+  .authorImage {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 10px;
+    &::before {
+      content: '';
+      display: block;
+      background: $linear-light-blue;
+      height: 8px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 0 0 0 10px;
+    }
+    img {
+      width: 100% !important;
+    }
+  }
+}

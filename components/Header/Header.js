@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { FaSearch, FaShareAlt, FaTimes } from 'react-icons/fa'
 import classname from 'classnames'
 import logo from './assets/logo.svg'
@@ -34,6 +35,8 @@ const HeaderWeb = () => {
 
   const [state, setState] = useReducer(reducer, initState)
   const { isOpenSearch, isOpenSocial, isOpenSubMenu } = state
+  const router = useRouter()
+
   const toggleSubMenu = key => {
     if (isOpenSubMenu !== key) {
       setState({ isOpenSubMenu: key })
@@ -52,11 +55,13 @@ const HeaderWeb = () => {
             <ul className={styles.mainMenu}>
               {cg_MENU_ITEMS.map(item => {
                 const { title, url, children, key, isExternalSite } = item
+
                 return (
                   <li
                     key={key}
                     className={classname(styles.menuItem, {
-                      [styles.actived]: isOpenSubMenu === key,
+                      [styles.actived]:
+                        isOpenSubMenu === key || url === router.pathname,
                     })}
                     onMouseOver={() => toggleSubMenu(key)}
                     onMouseOut={() => toggleSubMenu(null)}
