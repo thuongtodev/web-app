@@ -5,7 +5,7 @@ import { reducer } from '../../utils/functions'
 import styles from './styles.scss'
 
 const SubMenu = props => {
-  const { items, isActive } = props
+  const { items, isActive, activedItem } = props
   if (!Array.isArray(items) || items.length === 0) return null
 
   return (
@@ -18,6 +18,7 @@ const SubMenu = props => {
         const { title, url, children, key, isExternalSide } = item
         const itemClasses = classname(styles.subMenuItem, {
           [styles.hasChildren]: children && children.length > 0,
+          [styles.actived]: activedItem && activedItem.url === item.url,
         })
 
         return (

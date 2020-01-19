@@ -14,7 +14,7 @@ const HomeLayout = ({ children }) => {
       <Meta />
       <Header />
       {/* <div style={{ height: isMobile ? 70 : 48 }}></div> */}
-      {children}
+      <div style={{ paddingTop: '3rem' }}>{children}</div>
       <Footer />
     </div>
   )

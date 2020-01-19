@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FaSearch, FaShareAlt, FaTimes } from 'react-icons/fa'
@@ -11,6 +11,23 @@ import SubMenu from '../SubMenu'
 import { reducer } from '../../utils/functions'
 import { cg_SOCIALS, cg_MENU_ITEMS } from '../../constants/common'
 import styles from './styles.scss'
+
+const getActivedItem = (menuArr, currentPath) => {
+  if (!menuArr || !menuArr.length || !currentPath) return null
+  const path = currentPath.replace('/', '').split('/')
+  let result = null
+  for (let i = 0; i < menuArr.length; i++) {
+    const menuUrl = menuArr[i].url.replace('/', '')
+    if (path.includes(menuUrl)) {
+      result = menuArr[i]
+    } else if (menuArr[i].children) {
+      const subActivedItem = getActivedItem(menuArr[i].children, currentPath)
+      if (subActivedItem)
+        result = { ...subActivedItem, parentUrl: menuArr[i].url }
+    }
+  }
+  return result
+}
 
 const HeaderWeb = () => {
   const initState = {
@@ -31,17 +48,23 @@ const HeaderWeb = () => {
     isOpenSearch: false,
     isOpenSocial: false,
     isOpenSubMenu: null,
+    activedItem: null,
   }
 
   const [state, setState] = useReducer(reducer, initState)
-  const { isOpenSearch, isOpenSocial, isOpenSubMenu } = state
+  const { isOpenSearch, isOpenSocial, isOpenSubMenu, activedItem } = state
   const router = useRouter()
+  useEffect(() => {
+    const activedItem = getActivedItem(cg_MENU_ITEMS, router.pathname)
+    setState({ activedItem })
+  }, [router])
 
   const toggleSubMenu = key => {
     if (isOpenSubMenu !== key) {
       setState({ isOpenSubMenu: key })
     }
   }
+
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
@@ -55,13 +78,17 @@ const HeaderWeb = () => {
             <ul className={styles.mainMenu}>
               {cg_MENU_ITEMS.map(item => {
                 const { title, url, children, key, isExternalSite } = item
+                const isLinkActived =
+                  isOpenSubMenu === key ||
+                  (activedItem &&
+                    (activedItem.url === item.url ||
+                      activedItem.parentUrl === item.url))
 
                 return (
                   <li
                     key={key}
                     className={classname(styles.menuItem, {
-                      [styles.actived]:
-                        isOpenSubMenu === key || url === router.pathname,
+                      [styles.actived]: isLinkActived,
                     })}
                     onMouseOver={() => toggleSubMenu(key)}
                     onMouseOut={() => toggleSubMenu(null)}
@@ -79,7 +106,8 @@ const HeaderWeb = () => {
                     {children && (
                       <SubMenu
                         items={children}
-                        isActive={isOpenSubMenu === key}
+                        activedItem={activedItem}
+                        isActive={isLinkActived}
                       />
                     )}
                   </li>
