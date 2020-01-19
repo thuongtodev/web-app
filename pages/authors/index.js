@@ -7,7 +7,7 @@ const pageTitle =
 
 const AboutUs = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="Editorial Team">
       <Authors pageTitle={pageTitle} />
       <NewLetterBlock />
     </HomeLayout>

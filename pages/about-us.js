@@ -8,7 +8,7 @@ const pageTitle =
 
 const AboutUs = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="About CoinGeek">
       <AboutUsComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />

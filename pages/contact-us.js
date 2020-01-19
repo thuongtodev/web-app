@@ -5,7 +5,7 @@ import ContactUsForm from '../components/ContactUsForm'
 
 const ContactUs = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="Contact Us - CoinGeek">
       <ContactUsForm />
       <NewLetterBlock />
     </HomeLayout>

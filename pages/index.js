@@ -12,7 +12,7 @@ import InterviewsAndFeatures from '../components/InterviewsAndFeatures'
 
 const Home = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="CoinGeek | Bitcoin News & Blockchain Info">
       <Slider />
       <LastestNewsBlock />
       <BusinessAndTech />

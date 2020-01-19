@@ -7,7 +7,7 @@ const pageTitle = 'Terms of use'
 
 const TermsOfUse = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="Terms of Use">
       <TermsOfUseComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />

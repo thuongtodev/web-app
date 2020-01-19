@@ -8,7 +8,7 @@ const pageTitle =
 
 const Advertising = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="Advertisting">
       <AdvertisingComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />

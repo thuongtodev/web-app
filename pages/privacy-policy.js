@@ -7,7 +7,7 @@ const pageTitle = 'CoinGeek privacy policy'
 
 const PrivacyPolicy = () => {
   return (
-    <HomeLayout>
+    <HomeLayout title="Privacy Policy">
       <PrivacyPolicyComponent pageTitle={pageTitle} />
       <LastestNewsBlock limit={4} isShowAds={false} />
       <NewLetterBlock />
