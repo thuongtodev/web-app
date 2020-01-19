@@ -6,5 +6,6 @@ export const reducer = (state, newState) => ({
 })
 
 export const parseHtmlString = htmlStr => {
+  if (!htmlStr) return ''
   return parse(htmlStr)
 }

@@ -105,25 +105,23 @@ const AuthorProfile = props => {
               </div>
             </div>
           </div>
-          {description && (
-            <div className="my-3">
-              <div className="container">
-                <div className="row align-items-start justify-content-between">
-                  <div className="col-12 col-md-2 my-3"></div>
-                  <div className="col-12 col-md-10 my-3">
-                    <h3 className="text-uppercase font-weight-bold font1_15 mb-3">
-                      {position}
-                    </h3>
-                    <div className="font1_0 font-weight-light">
-                      <p className="longContent">
-                        {parseHtmlString(description)}
-                      </p>
-                    </div>
+          <div className="my-3">
+            <div className="container">
+              <div className="row align-items-start justify-content-between">
+                <div className="col-12 col-md-2 my-3"></div>
+                <div className="col-12 col-md-10 my-3">
+                  <h3 className="text-uppercase font-weight-bold font1_15 mb-3">
+                    {position}
+                  </h3>
+                  <div className="font1_0 font-weight-light">
+                    <p className="longContent">
+                      {parseHtmlString(description)}
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </>
       )}
     </div>

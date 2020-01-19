@@ -24,7 +24,7 @@ const AuthorPage = props => {
   return (
     <div className={styles.authorPage}>
       <AuthorProfile author={author} isDetail />
-      <div className="container">
+      <div className="container pt-3">
         <GridNews
           title={`Ariticles by ${name}:`}
           news={articles}
