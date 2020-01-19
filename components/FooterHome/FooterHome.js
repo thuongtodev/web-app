@@ -11,6 +11,7 @@ import {
 } from 'react-icons/fa'
 import NewLetterForm from '../NewLetterForm'
 import styles from './styles.scss'
+import Link from 'next/link'
 
 const FooterHome = () => {
   return (
@@ -88,9 +89,9 @@ const FooterHome = () => {
                     <h3 className={styles.h3}>Events</h3>
                     <ul className="nav flex-column font0_7 text-uppercase homefooter_nav">
                       <li className="nav-item">
-                        <a className={styles.a} href="/events/">
-                          All events
-                        </a>
+                        <Link href="/events">
+                          <a className={styles.a}>All events</a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
