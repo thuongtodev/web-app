@@ -107,16 +107,19 @@
               }
             }
           }
-          &:hover {
-            .a {
-              &::before {
-                width: 100%;
-              }
-            }
-          }
+          // &:hover {
+          //   .a {
+          //     &::before {
+          //       width: 100%;
+          //     }
+          //   }
+          // }
           &.actived {
             .a {
               font-weight: 600;
+              &::before {
+                width: 100%;
+              }
             }
           }
         }
