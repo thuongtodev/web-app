@@ -1,0 +1,31 @@
+.fullHeader {
+  background: linear-gradient(315deg, #06427e 0%, #0061bf 100%);
+  padding-top: 3rem;
+}
+
+.wrapper {
+  padding: 30px 0;
+}
+
+.table {
+  width: 100%;
+  margin-top: 1em;
+  border-collapse: collapse;
+  border: none;
+  border-color: #ffffff;
+  background-color: #ffffff;
+
+  .td {
+    width: 25%;
+    border: none;
+  }
+}
+
+.whyBsvLable {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eab300;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
