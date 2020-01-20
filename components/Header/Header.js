@@ -6,8 +6,9 @@ import classname from 'classnames'
 import logo from './assets/logo.svg'
 import en from './assets/en.png'
 import zh from './assets/zh.png'
-import Dropdown from './components/Dropdown'
+// import Dropdown from './components/Dropdown'
 import SubMenu from '../SubMenu'
+import LanguagesSelection from './components/LanguagesSelection'
 import { reducer } from '../../utils/functions'
 import { cg_SOCIALS, cg_MENU_ITEMS } from '../../constants/common'
 import styles from './styles.scss'
@@ -31,20 +32,6 @@ const getActivedItem = (menuArr, currentPath) => {
 
 const HeaderWeb = () => {
   const initState = {
-    languages: [
-      {
-        id: 0,
-        imgUrl: en,
-        selected: true,
-        title: 'en',
-      },
-      {
-        id: 1,
-        imgUrl: zh,
-        selected: false,
-        title: 'zh',
-      },
-    ],
     isOpenSearch: false,
     isOpenSocial: false,
     isOpenSubMenu: null,
@@ -117,26 +104,29 @@ const HeaderWeb = () => {
           </nav>
 
           <button className={styles.buttonBuy}>Buy BSV</button>
-          <div
-            className={styles.iconContainer}
-            onClick={() => setState({ isOpenSearch: !isOpenSearch })}
-          >
-            <FaSearch />
-          </div>
+          <div className={styles.searchAndSocial}>
+            <div
+              className={styles.iconContainer}
+              onClick={() => setState({ isOpenSearch: !isOpenSearch })}
+            >
+              <FaSearch />
+            </div>
 
-          <div
-            className={styles.iconContainer}
-            onClick={() => setState({ isOpenSocial: !isOpenSocial })}
-          >
-            <FaShareAlt />
+            <div
+              className={styles.iconContainer}
+              onClick={() => setState({ isOpenSocial: !isOpenSocial })}
+            >
+              <FaShareAlt />
+            </div>
           </div>
-          <div>
+          {/* <div>
             <Dropdown list={state.languages} />
-          </div>
+          </div> */}
 
+          <LanguagesSelection languages={state.languages} />
           <div
             className={classname(styles.headerSearchWrapper, {
-              [styles.active]: isOpenSearch,
+              [styles.actived]: isOpenSearch,
             })}
           >
             <div className="row">
@@ -170,7 +160,7 @@ const HeaderWeb = () => {
           </div>
           <div
             className={classname(styles.headerSocialWrapper, {
-              [styles.active]: isOpenSocial,
+              [styles.actived]: isOpenSocial,
             })}
           >
             <div className="row">

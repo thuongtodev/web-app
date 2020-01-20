@@ -18,24 +18,11 @@ import en from './assets/en.png'
 import zh from './assets/zh.png'
 import Dropdown from './components/Dropdown'
 import { reducer } from '../../utils/functions'
+import LanguagesSelection from './components/LanguagesSelection'
 
 const HeaderMobile = () => {
   const initState = {
     isOpenMenu: false,
-    languages: [
-      {
-        id: 0,
-        imgUrl: en,
-        selected: true,
-        title: 'en',
-      },
-      {
-        id: 1,
-        imgUrl: zh,
-        selected: false,
-        title: 'zh',
-      },
-    ],
   }
 
   const [state, setState] = useReducer(reducer, initState)
@@ -53,7 +40,7 @@ const HeaderMobile = () => {
         </div>
         <div className={styles.rightContent}>
           {!state.isOpenMenu && <FaSearch />}
-          <Dropdown list={state.languages} />
+          <LanguagesSelection />
         </div>
       </div>
 

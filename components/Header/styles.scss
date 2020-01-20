@@ -10,8 +10,11 @@
 
   .wrapper {
     margin: 0 auto;
-    padding: 0 1.875rem;
+    padding: 0;
     position: relative;
+    @include breakpoint(lg) {
+      max-width: 73.75rem;
+    }
     .headerContainer {
       display: flex;
       align-items: center;
@@ -107,13 +110,6 @@
               }
             }
           }
-          // &:hover {
-          //   .a {
-          //     &::before {
-          //       width: 100%;
-          //     }
-          //   }
-          // }
           &.actived {
             .a {
               font-weight: 600;
@@ -137,10 +133,6 @@
         font-size: 0.7rem;
         margin: 5px auto;
         margin-bottom: 20px;
-        background: #d9a600;
-        background: -moz-linear-gradient(45deg, #feb645 0, #eab300 100%);
-        background: -webkit-linear-gradient(45deg, #feb645 0, #eab300 100%);
-        background: -o-linear-gradient(45deg, #feb645 0, #eab300 100%);
         background: $linear-light-yellow;
         border: 1px solid #d9a600;
         color: #fff;
@@ -156,14 +148,14 @@
 
         &:hover {
           background: #daa909;
-          background: -moz-linear-gradient(45deg, #daa909 0, #ffc517 100%);
-          background: -webkit-linear-gradient(45deg, #daa909 0, #ffc517 100%);
-          background: -o-linear-gradient(45deg, #daa909 0, #ffc517 100%);
           background: linear-light-yellow;
           border: 1px solid #daa909;
         }
       }
-
+      .searchAndSocial {
+        width: 130px;
+        display: flex;
+      }
       .iconContainer {
         margin: 0 10px;
         font-size: 1rem;
@@ -185,7 +177,7 @@
         display: none;
         margin: 0 auto;
         top: 0;
-        &.active {
+        &.actived {
           height: 49px;
           display: block;
         }
