@@ -51,9 +51,53 @@ BREAKPOINTS
     }
   }
 
-  .longContent > p {
-    line-height: 1.5rem;
-    margin-bottom: 2.5rem;
+  .longContent {
+    p {
+      line-height: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    a {
+      color: #4a90e2;
+    }
+    blockquote {
+      background: 0 0;
+      padding-top: 0;
+      padding-left: 80px;
+      padding-right: 80px;
+      quotes: '“' '”' '‘' '’';
+      position: relative;
+      line-height: 1.5rem;
+      &::before,
+      &::after {
+        color: #ddd;
+        font-size: 6rem;
+        font-family: Montserrat;
+        display: block;
+        font-weight: 900;
+        position: absolute;
+      }
+      &::before {
+        content: open-quote;
+        height: 0;
+        line-height: 1;
+        left: 0;
+        top: 10px;
+      }
+      &::after {
+        content: close-quote;
+        line-height: 10%;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  }
+
+  .order-first {
+    order: -1;
+  }
+
+  .order-last {
+    order: 13;
   }
 
   img {

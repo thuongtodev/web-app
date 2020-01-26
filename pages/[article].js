@@ -1,12 +1,14 @@
 import HomeLayout from '../layouts/HomeLayout'
-import AuthorPage from '../components/AuthorPage'
+import ArticlePage from '../components/ArticlePage'
+import NewLetterBlock from '../components/NewLetterBlock'
 
-const AboutUs = () => {
+const Article = () => {
   return (
     <HomeLayout>
-      <AuthorPage />
+      <ArticlePage />
+      <NewLetterBlock />
     </HomeLayout>
   )
 }
 
-export default AboutUs
+export default Article
