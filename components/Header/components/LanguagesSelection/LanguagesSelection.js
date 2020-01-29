@@ -21,6 +21,7 @@ export const cg_LANGUAGES = [
 ]
 
 const LanguagesSelection = props => {
+  const { customClassName } = props
   const initState = {
     activedLang: cg_LANGUAGES[0],
     isOpenList: false,
@@ -30,6 +31,10 @@ const LanguagesSelection = props => {
   const toggleList = () => {
     setState({ isOpenList: !state.isOpenList })
   }
+  const languageSelectionClasses = classname(
+    styles.languageSelection,
+    customClassName
+  )
   const subMenuClasses = classname(styles.subMenu, {
     [styles.actived]: !!state.isOpenList,
   })
@@ -37,7 +42,7 @@ const LanguagesSelection = props => {
   const remainingLangs = cg_LANGUAGES.filter(item => item.id !== activedLang.id)
 
   return (
-    <div className={styles.languageSelection}>
+    <div className={languageSelectionClasses}>
       <div className={styles.dropdownWrapper}>
         <ul>
           <li className={styles.listItem} onClick={toggleList}>

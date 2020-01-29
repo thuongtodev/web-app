@@ -10,9 +10,11 @@
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   border-radius: 0 0 10px 10px;
   visibility: hidden;
-  transition: all 2s;
   opacity: 0;
   top: 100%;
+  @include breakpoint(mobile) {
+    top: calc(100% + 1.2rem);
+  }
 
   .subMenuItem {
     display: inline-block;
@@ -61,7 +63,6 @@
         top: 42px;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.6s;
         padding-left: 0;
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         border-radius: 20px 20px 0 10px;
@@ -106,8 +107,9 @@
       font-weight: 600;
     }
   }
-
+  transition: all 0.3s;
   &.actived {
+    transition: all 1s;
     visibility: visible;
     opacity: 1;
   }

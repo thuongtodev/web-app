@@ -1,14 +1,12 @@
 import React from 'react'
 import FullWidthHeader from '../FullWidthHeader'
-import RightSidebar from '../RightSidebar/RightSidebar'
-import { cg_TERMS_SIDEBAR } from '../../constants/common'
 
 const BitcoinVentures = props => {
   const { pageTitle } = props
 
   return (
     <article>
-      <FullWidthHeader title={pageTitle} isPaddingTop={false} />
+      <FullWidthHeader title={pageTitle} isPaddingTop={false} color="purple" />
       <div className="wrapper">
         <div className="container page-container">
           <div className="row align-items-start justify-content-between mb-5">

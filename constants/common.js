@@ -119,25 +119,40 @@ export const cg_MENU_ITEMS = [
     url: '/news',
     children: cg_NEWS_SUB_MENU,
     isExternalSite: false,
+    color: 1,
   },
   {
     title: 'Conferences',
     key: 'conferences',
     url: 'https://coingeekconference.com/',
     isExternalSite: true,
+    color: 2,
   },
   {
     title: 'How to buy bsv?',
     key: 'howToBuyBSV',
     url: '/how-to-buy-bsv',
     isExternalSite: false,
+    color: 3,
   },
   {
     title: 'Ventures',
     key: 'ventures',
     url: '/bitcoin-ventures',
     isExternalSite: false,
+    color: 4,
   },
+]
+
+export const cg_MENU_ITEMS_WITH_HOME = [
+  {
+    title: 'Home',
+    key: 'home',
+    url: '/',
+    isExternalSite: false,
+    color: 0,
+  },
+  ...cg_MENU_ITEMS,
 ]
 
 export const cg_ABOUT_US_SIDEBAR = [

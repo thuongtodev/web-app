@@ -3,10 +3,11 @@ import classname from 'classnames'
 import styles from './styles.scss'
 
 const FullWidthHeader = props => {
-  const { title, isPaddingTop } = props
+  const { title, isPaddingTop, color } = props
   const headerClasses = classname(styles.fullWidthHeader, 'pt-3', {
     'pt-md-5': isPaddingTop,
     [styles.isPaddingTop]: isPaddingTop,
+    [styles.purple]: color === 'purple',
   })
   const rowClasses = classname(
     'row align-items-start justify-content-between',

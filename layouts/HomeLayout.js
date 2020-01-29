@@ -16,7 +16,6 @@ const HomeLayout = ({ children, title = 'CoinGeek' }) => {
     <div>
       <Meta title={title} />
       <Header />
-      {/* <div style={{ height: isMobile ? 70 : 0 }}></div> */}
       <div style={style}>{children}</div>
       <Footer />
     </div>
