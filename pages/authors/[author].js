@@ -1,7 +1,7 @@
 import HomeLayout from '../../layouts/HomeLayout'
 import AuthorPage from '../../components/AuthorPage'
 
-const AboutUs = () => {
+const AuthorInfo = () => {
   return (
     <HomeLayout>
       <AuthorPage />
@@ -9,4 +9,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default AuthorInfo

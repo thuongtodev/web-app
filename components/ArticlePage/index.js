@@ -14,6 +14,7 @@ const ArticlePage = props => {
   useEffect(() => {
     const slug = _get(Router, 'router.query.article', '')
     const article = getNewsDetail(slug)
+
     if (!article) {
       Router.replace('/404')
     }

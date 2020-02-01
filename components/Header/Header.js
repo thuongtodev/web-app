@@ -102,13 +102,14 @@ const Header = () => {
                   key,
                   isExternalSite,
                   color,
+                  isShow,
                 } = item
                 const isLinkActived =
                   isOpenSubMenu === key ||
                   (activedItem &&
                     (activedItem.url === item.url ||
                       activedItem.parentUrl === item.url))
-
+                if (!isShow) return null
                 return (
                   <li
                     key={key}

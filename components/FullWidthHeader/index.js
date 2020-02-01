@@ -3,7 +3,7 @@ import classname from 'classnames'
 import styles from './styles.scss'
 
 const FullWidthHeader = props => {
-  const { title, isPaddingTop, color } = props
+  const { title, isPaddingTop, color, bgImage } = props
   const headerClasses = classname(styles.fullWidthHeader, 'pt-3', {
     'pt-md-5': isPaddingTop,
     [styles.isPaddingTop]: isPaddingTop,
@@ -15,10 +15,16 @@ const FullWidthHeader = props => {
       'mt-5 mt-md-5': isPaddingTop,
     }
   )
+  const customStyles = bgImage
+    ? {
+        background: `url(${bgImage}) no-repeat center center`,
+        backgroundSize: 'cover',
+      }
+    : {}
 
   return (
     <header className="page-header">
-      <div className={headerClasses}>
+      <div className={headerClasses} style={customStyles}>
         <div className="container" tabIndex="-1">
           <div className={rowClasses}>
             <div className="col-12 col-md-8">

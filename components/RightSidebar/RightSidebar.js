@@ -1,20 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
+import classname from 'classnames'
 import { FaArrowRight } from 'react-icons/fa'
 import styles from './styles.scss'
 
 const RightSidebar = props => {
-  const { sidebarItems } = props
+  const { sidebarItems, title } = props
   if (!sidebarItems || !Array.isArray(sidebarItems)) return null
+  const sidebarClasses = classname(styles.sidebarContainer, {
+    [styles.hasTopBorder]: !title,
+  })
 
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside className={sidebarClasses}>
+      {title && <h5 className="text-uppercase font0_75">{title}</h5>}
       <div className="pt-2">
         {sidebarItems.map(item => {
           const { title, subTitle, url } = item
           return (
             <div
-              key={title}
+              key={`${title}-${url}-${subTitle}`}
               className="row align-items-start justify-content-start"
             >
               <div className="col-auto">

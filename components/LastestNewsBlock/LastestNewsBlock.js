@@ -50,7 +50,9 @@ const LastestNewsBlock = props => {
               </div>
             </div>
           )}
-          {!isShowAds && <GridNews news={lastestNews} limit={limit} />}
+          {!isShowAds && (
+            <GridNews title="Lastest News" news={lastestNews} limit={limit} />
+          )}
         </div>
       )}
       {isVerticle && (

@@ -120,6 +120,7 @@ export const cg_MENU_ITEMS = [
     children: cg_NEWS_SUB_MENU,
     isExternalSite: false,
     color: 1,
+    isShow: true,
   },
   {
     title: 'Conferences',
@@ -127,6 +128,7 @@ export const cg_MENU_ITEMS = [
     url: 'https://coingeekconference.com/',
     isExternalSite: true,
     color: 2,
+    isShow: true,
   },
   {
     title: 'How to buy bsv?',
@@ -134,6 +136,15 @@ export const cg_MENU_ITEMS = [
     url: '/how-to-buy-bsv',
     isExternalSite: false,
     color: 3,
+    isShow: false,
+  },
+  {
+    title: 'Bitcoin101',
+    key: 'bitcoin101',
+    url: '/bitcoin101',
+    isExternalSite: false,
+    color: 3,
+    isShow: true,
   },
   {
     title: 'Ventures',
@@ -141,6 +152,7 @@ export const cg_MENU_ITEMS = [
     url: '/bitcoin-ventures',
     isExternalSite: false,
     color: 4,
+    isShow: true,
   },
 ]
 
