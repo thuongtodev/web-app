@@ -48,7 +48,7 @@ const ArticlePage = props => {
               </Link>
               <span>
                 {' » '}
-                <Link href={`/news/category/${categoryUrl}/`}>
+                <Link href={`/news/category/${categoryUrl}`}>
                   <a>{category}</a>
                 </Link>
                 <span className="breadcrumb_last"> » {title}</span>

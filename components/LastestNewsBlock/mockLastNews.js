@@ -64,8 +64,7 @@ export const getNewsDetail = id => {
       'https://coingeek.com/wp-content/uploads/2020/01/ex-mt-gox-ceo-mark-karpeles-wants-lawsuit-dismissed.jpg',
     description:
       'New documents produced in Ira Kleiman’s lawsuit against Dr. Craig Wright could provide important information about the early days of Bitcoin.',
-    url:
-      'https://coingeek.com/tulip-trust-3-documents-produced-in-kleiman-vs-wright-lawsuit/',
+    url: '/tulip-trust-3-documents-produced-in-kleiman-vs-wright-lawsuit/',
     category: 'Business',
     categoryUrl: 'business',
     datetime: '5 hours ago',

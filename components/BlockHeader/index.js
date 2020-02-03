@@ -3,7 +3,7 @@ const BlockHeader = props => {
 
   return (
     <div className="row align-items-center justify-content-center">
-      <div className="col-12">
+      <div className="col">
         <h2 className="text-uppercase font-weight-normal font0_9 py-2 my-0">
           {url && <a href={url}>{title}</a>}
           {!url && title}

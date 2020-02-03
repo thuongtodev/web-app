@@ -83,7 +83,9 @@ const Header = () => {
         <div className={styles.headerContainer}>
           <div className={styles.logo}>
             <Link href="/">
-              <img src={logo} alt="logo" className="lazyload-loaded" />
+              <a>
+                <img src={logo} alt="logo" className="lazyload-loaded" />
+              </a>
             </Link>
           </div>
           <div

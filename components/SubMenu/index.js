@@ -1,7 +1,5 @@
-import { useReducer } from 'react'
 import classname from 'classnames'
 import Link from 'next/link'
-import { reducer } from '../../utils/functions'
 import styles from './styles.scss'
 
 const SubMenu = props => {
@@ -15,7 +13,7 @@ const SubMenu = props => {
       })}
     >
       {items.map(item => {
-        const { title, url, children, key, isExternalSide } = item
+        const { title, url, children, key, isExternalSite } = item
         const itemClasses = classname(styles.subMenuItem, {
           [styles.hasChildren]: children && children.length > 0,
           [styles.actived]: activedItem && activedItem.url === item.url,
@@ -23,14 +21,19 @@ const SubMenu = props => {
 
         return (
           <li className={itemClasses} key={key}>
-            <a href={url}>{title}</a>
+            {!isExternalSite && (
+              <Link href={url}>
+                <a>{title}</a>
+              </Link>
+            )}
+            {isExternalSite && <a href={url}>{title}</a>}
             {children && children.length > 0 && (
               <ul className={styles.children}>
                 {children.map(child => {
                   return (
                     <li className={styles.child} key={child.key}>
-                      {isExternalSide && <a href={child.url}>{child.title}</a>}
-                      {!isExternalSide && (
+                      {isExternalSite && <a href={child.url}>{child.title}</a>}
+                      {!isExternalSite && (
                         <Link href={child.url}>
                           <a>{child.title}</a>
                         </Link>
