@@ -33,7 +33,12 @@ const SubMenu = props => {
                   return (
                     <li className={styles.child} key={child.key}>
                       {isExternalSite && <a href={child.url}>{child.title}</a>}
-                      {!isExternalSite && (
+                      {!isExternalSite && child.dynamicPath && (
+                        <Link href={child.dynamicPath} as={child.url}>
+                          <a>{child.title}</a>
+                        </Link>
+                      )}
+                      {!isExternalSite && !child.dynamicPath && (
                         <Link href={child.url}>
                           <a>{child.title}</a>
                         </Link>

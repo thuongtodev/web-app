@@ -47,7 +47,7 @@ const AuthorProfile = props => {
       {!isDetail && (
         <>
           <div className="text-center position-relative">
-            <Link href={detailtUrl}>
+            <Link href="authors/[author]" as={detailtUrl}>
               <a className={styles.authorImage}>
                 <img
                   src={image}

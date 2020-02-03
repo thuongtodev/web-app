@@ -9,7 +9,7 @@ const Article = props => {
     title,
     description,
     url,
-    slug,
+    dynamicPath,
     category,
     image,
     isSmall,
@@ -23,13 +23,14 @@ const Article = props => {
     'w-100': !isSmall,
   })
   const articleUrl = getInternalSlug(url)
+  const dynamicHref = dynamicPath || '/[article]'
 
   if (isVerticalImage) {
     return (
       <article>
         <div className="row align-items-start justify-content-between">
           <div className="col-4 col-md-4">
-            <Link href={`/${articleUrl}`}>
+            <Link href={dynamicHref} as={`/${articleUrl}`}>
               <a className="d-block my-3">
                 <img className={imageClasses} alt={title} src={image} />
               </a>
@@ -38,7 +39,7 @@ const Article = props => {
           <div className="col-8 col-md-8 pl-0">
             <ArticleMeta datetime={datetime} category={category} />
             <header>
-              <Link href={`/${articleUrl}`}>
+              <Link href={dynamicHref} as={`/${articleUrl}`}>
                 <a>
                   <h2 className={headerClasses}>{title}</h2>
                 </a>
@@ -53,14 +54,14 @@ const Article = props => {
 
   return (
     <article>
-      <Link href={`/${articleUrl}`}>
+      <Link href={dynamicHref} as={`/${articleUrl}`}>
         <a className="d-block my-3">
           <img className={imageClasses} alt={title} src={image} />
         </a>
       </Link>
       {datetime && <ArticleMeta datetime={datetime} category={category} />}
       <header>
-        <Link href={`/${articleUrl}`}>
+        <Link href={dynamicHref} as={`/${articleUrl}`}>
           <a>
             <h2 className={headerClasses}>{title}</h2>
           </a>

@@ -96,7 +96,10 @@ const ArticlePage = props => {
                   <ul className="mx-0 my-3 p-0">
                     {tags.map(item => (
                       <li key={item.slug}>
-                        <Link href={`/news/tag/${item.slug}`}>
+                        <Link
+                          href="/news/tag/[category]"
+                          as={`/news/tag/${item.slug}`}
+                        >
                           <a>{item.title}</a>
                         </Link>
                       </li>

@@ -34,14 +34,13 @@ const Bitcoin101 = props => {
         <div className="container">
           <div className="row align-items-start justify-content-center mb-5">
             {data.map(item => {
-              console.log(
-                '`bitcoin101/${item.slug}`: ',
-                `bitcoin101/${item.slug}`
-              )
-
               return (
                 <div key={item.id} className="col-6 col-md-4 col-lg-4 mb-3">
-                  <Article {...item} url={`bitcoin101/${item.slug}`} />
+                  <Article
+                    {...item}
+                    url={`bitcoin101/${item.slug}`}
+                    dynamicPath="/bitcoin101/[article]"
+                  />
                 </div>
               )
             })}
