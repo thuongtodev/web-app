@@ -187,12 +187,12 @@ const FooterHome = () => {
                   >
                     <FaWeixin />
                   </a>
-                  <div className="tooltip" style={{ left: '-100%' }}>
+                  {/* <div className="tooltip" style={{ left: '-100%' }}>
                     <img
                       src="https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://coingeek.com/wp-content/uploads/2019/08/qrcode_for_gh_906aba1be2b7_258.jpg"
                       className=" img-fluid lazyload-loaded"
                     />
-                  </div>
+                  </div> */}
                 </li>
               </ul>
             </div>
