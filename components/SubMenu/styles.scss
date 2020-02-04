@@ -83,6 +83,7 @@
             position: static !important;
           }
           &:hover {
+            background: $cgBlue;
             background: $linear-light-blue;
             a {
               color: #fff !important;

@@ -9,6 +9,7 @@
     &::before {
       content: '';
       display: block;
+      background: $cgBlue;
       background: $linear-light-blue;
       height: 8px;
       width: 100%;
@@ -23,6 +24,7 @@
   }
   &.isDetail {
     .authorName {
+      background: $cgBlue;
       background: $linear-light-blue;
       img {
         margin-bottom: -80px;

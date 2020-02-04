@@ -5,6 +5,8 @@ import sliders from './mockSlider.js'
 import cgLogo from '../../assets/cgLogo.svg'
 import 'swiper/swiper.scss'
 import styles from './styles.scss'
+import Link from 'next/link'
+import Router from 'next/router'
 
 const Slider = props => {
   const params = {
@@ -22,6 +24,9 @@ const Slider = props => {
     },
     effect: 'fade',
   }
+  const handleClickSlider = url => {
+    console.log('-------------------click')
+  }
 
   return (
     <div className={styles.sliderWrapper}>
@@ -35,17 +40,15 @@ const Slider = props => {
                 <div
                   className={`col-6 col-md-6 text-right pr-md-0 ${styles.firstDivider}`}
                 >
-                  <a
-                    href="https://coingeek.com/"
-                    className={styles.customLogoLink}
-                    rel="home"
-                  >
-                    <img
-                      src={cgLogo}
-                      className="lazyload-loaded"
-                      alt="CoinGeek"
-                    />
-                  </a>
+                  <Link href="/">
+                    <a className={styles.customLogoLink} rel="home">
+                      <img
+                        src={cgLogo}
+                        className="lazyload-loaded"
+                        alt="CoinGeek"
+                      />
+                    </a>
+                  </Link>
                 </div>
                 <div className="col-6 col-md-6 text-left">
                   <h1
@@ -84,9 +87,11 @@ const Slider = props => {
                         className="d-block w-100 h-100 position-relative"
                       >
                         <div className="row align-items-center justify-content-between mx-auto">
-                          <div className="col-12 order-md-last col-md-8 px-0">
+                          <div
+                            className="col-12 order-md-last col-md-8 px-0"
+                            onClick={handleClickSlider}
+                          >
                             <a
-                              href={url}
                               className={`${styles.sliderImage} float-none float-md-right d-block position-relative`}
                             >
                               <img
@@ -96,7 +101,10 @@ const Slider = props => {
                               />
                             </a>
                           </div>
-                          <div className="col-11 order-md-first col-md-4 px-0 mx-auto">
+                          <div
+                            className="col-11 order-md-first col-md-4 px-0 mx-auto"
+                            onClick={handleClickSlider}
+                          >
                             <div
                               className={`${styles.sliderContent} cgRadius mx-auto bg-white p-3 p-md-4 overflow-hidden shadow`}
                             >
@@ -105,7 +113,7 @@ const Slider = props => {
                                 datetime={datetime}
                               />
                               <header className="articleHeader">
-                                <a href={url} className="text-body font0_9">
+                                <a className="text-body font0_9">
                                   <h2 className="articleTitle">{title}</h2>
                                 </a>
                               </header>

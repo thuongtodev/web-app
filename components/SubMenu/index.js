@@ -1,5 +1,4 @@
 import classname from 'classnames'
-import Link from 'next/link'
 import CgLink from '../CgLink'
 import styles from './styles.scss'
 

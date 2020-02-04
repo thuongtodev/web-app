@@ -10,8 +10,10 @@ import {
   FaWeixin,
 } from 'react-icons/fa'
 import NewLetterForm from '../NewLetterForm'
+import cgLogoNews from '../../assets/cgLogoNews.svg'
 import styles from './styles.scss'
 import Link from 'next/link'
+import CgLink from '../CgLink'
 
 const FooterHome = () => {
   return (
@@ -22,11 +24,7 @@ const FooterHome = () => {
             <div className="footer__home--logo">
               <div className={styles.cgnews}>
                 <a href="https://coingeek.com/">
-                  <img
-                    className={styles.image}
-                    src="https://coingeek.com/wp-content/uploads/2019/06/CG-News-Black.svg"
-                    alt=""
-                  />
+                  <img className={styles.image} src={cgLogoNews} alt="" />
                 </a>
               </div>
             </div>
@@ -45,43 +43,51 @@ const FooterHome = () => {
                     <h3 className={styles.h3}>News</h3>
                     <ul className="nav flex-column font0_7 text-uppercase homefooter_nav text-decoration-none">
                       <li className="nav-item">
-                        <a className={styles.a} href="/news/category/business/">
-                          Business
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
+                        <CgLink
+                          title="Business"
                           className={styles.a}
-                          href="/news/category/editorial/"
-                        >
-                          Editorial
-                        </a>
+                          href="/news"
+                          query={{ category: 'business' }}
+                        />
                       </li>
                       <li className="nav-item">
-                        <a className={styles.a} href="/news/category/tech/">
-                          Technology
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
+                        <CgLink
+                          title="Editorial"
                           className={styles.a}
-                          href="/news/category/press-releases/"
-                        >
-                          Press Releases
-                        </a>
+                          href="/news"
+                          query={{ category: 'editorial' }}
+                        />
                       </li>
                       <li className="nav-item">
-                        <a
+                        <CgLink
+                          title="Technology"
                           className={styles.a}
-                          href="/news/category/interviews/"
-                        >
-                          Interviews
-                        </a>
+                          href="/news"
+                          query={{ category: 'tech' }}
+                        />
                       </li>
                       <li className="nav-item">
-                        <a className={styles.a} href="/videos/">
-                          Videos
-                        </a>
+                        <CgLink
+                          title="Press Releases"
+                          className={styles.a}
+                          href="/news"
+                          query={{ category: 'press-releases' }}
+                        />
+                      </li>
+                      <li className="nav-item">
+                        <CgLink
+                          title="Interviews"
+                          className={styles.a}
+                          href="/news"
+                          query={{ category: 'interviews' }}
+                        />
+                      </li>
+                      <li className="nav-item">
+                        <CgLink
+                          title="Videos"
+                          className={styles.a}
+                          href="/videos"
+                        />
                       </li>
                     </ul>
                   </div>

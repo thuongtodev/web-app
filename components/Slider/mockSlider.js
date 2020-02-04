@@ -10,7 +10,7 @@ const mockSlider = [
     url:
       'https://coingeek.com/taal-lowers-bitcoin-sv-transaction-fees-to-support-enterprise-blockchain-applications/',
     category: 'Press Releases',
-    date: '09 January',
+    datetime: '09 January',
   },
   {
     id: 'slider_____002',
@@ -20,10 +20,9 @@ const mockSlider = [
       'https://coingeek.com/wp-content/uploads/2020/01/bitcoin-rules-vs-consensus-rules-01.jpg',
     description:
       'Following the implementation of lower mining Bitcoin SV transaction fees by Taal Distributed Information Technologies Inc., CoinGeek Mining has decided to follow suit and match these fee reductions.',
-    url:
-      'https://coingeek.com/wp-content/uploads/2020/01/bitcoin-sv-mining-fees-just-got-even-lower-coingeek-follows-taal-mining-with-fee-reductions.jpg',
+    url: '/happy-birthday-bitcoin-11-years-since-first-software-release/',
     category: 'Press Releases',
-    date: '09 January',
+    datetime: '09 January',
   },
   {
     id: 'slider_____001',
@@ -32,10 +31,9 @@ const mockSlider = [
       'https://cdn.shortpixel.ai/client/q_lossless,ret_img/https://coingeek.com/wp-content/uploads/2020/01/happy-birthday-bitcoin-11-years-since-first-software-release.jpg',
     description:
       'Bitcoin is officially 11 years old today, thedateSatoshi Nakamoto released version 0.1 of the Bitcoin protocol software.',
-    url:
-      'https://coingeek.com/happy-birthday-bitcoin-11-years-since-first-software-release/',
+    url: '/happy-birthday-bitcoin-11-years-since-first-software-release/',
     category: 'Tech',
-    date: '09 January',
+    datetime: '09 January',
   },
 ]
 

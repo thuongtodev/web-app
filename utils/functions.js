@@ -15,8 +15,8 @@ export const checkHasDomain = urlStr => {
   return regex.test(urlStr)
 }
 
-const DOMAIN = 'https://coingeek.com/'
+const DOMAIN = 'https://coingeek.com'
 
 export const getInternalSlug = url => {
-  return url.replace(DOMAIN, '')
+  return url.replace(DOMAIN, '').replace(/^(\/)/, '')
 }

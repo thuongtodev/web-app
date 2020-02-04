@@ -3,7 +3,14 @@ import BlockHeader from '../BlockHeader'
 import Article from '../Article'
 
 const GridNews = props => {
-  const { title, news, limit, justifyContent = 'between' } = props
+  const {
+    title,
+    news,
+    limit,
+    justifyContent = 'between',
+    imgClassName,
+    dynamicPath,
+  } = props
   if (!news || !Array.isArray(news) || news.length < 1) return null
 
   return (
@@ -17,7 +24,11 @@ const GridNews = props => {
           const { id } = item
           return (
             <div key={id} className="col-6 col-md-4 col-lg-3 mb-3">
-              <Article {...item} />
+              <Article
+                {...item}
+                dynamicPath={dynamicPath}
+                imgClassName={imgClassName}
+              />
             </div>
           )
         })}

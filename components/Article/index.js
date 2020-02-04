@@ -14,14 +14,19 @@ const Article = props => {
     image,
     isSmall,
     isVerticalImage,
+    imgClassName,
   } = props
   const headerClasses = classname('articleTitle', {
     font0_8: isSmall,
     font1_0: !isSmall,
   })
-  const imageClasses = classname('cgRadius img-fluid  lazyload-loaded', {
-    'w-100': !isSmall,
-  })
+  const imageClasses = classname(
+    'cgRadius img-fluid  lazyload-loaded',
+    // imgClassName,
+    {
+      'w-100': !isSmall,
+    }
+  )
   const articleUrl = getInternalSlug(url)
   const dynamicHref = dynamicPath || '/[article]'
 
@@ -31,7 +36,7 @@ const Article = props => {
         <div className="row align-items-start justify-content-between">
           <div className="col-4 col-md-4">
             <Link href={dynamicHref} as={`/${articleUrl}`}>
-              <a className="d-block my-3">
+              <a className={`d-block my-3 ${imgClassName}`}>
                 <img className={imageClasses} alt={title} src={image} />
               </a>
             </Link>
@@ -55,7 +60,7 @@ const Article = props => {
   return (
     <article>
       <Link href={dynamicHref} as={`/${articleUrl}`}>
-        <a className="d-block my-3">
+        <a className={`d-block my-3 ${imgClassName}`}>
           <img className={imageClasses} alt={title} src={image} />
         </a>
       </Link>

@@ -6,7 +6,7 @@ export const interviewNews = [
       'https://coingeek.com/wp-content/uploads/2020/01/dr-craig-wright-on-why-bitcoin-is-honest-money-video-feat-140x165.jpg',
     description:
       'The Bitcoin expert and nChain chief science officer speaks about Bitcoin’s virtues at the Malta AI & Blockchain Conference.',
-    url: 'https://coingeek.com/craig-wright-why-bitcoin-is-honest-money-video/',
+    url: '/craig-wright-why-bitcoin-is-honest-money-video/',
     category: 'Interviews',
     datetime: '11 hours ago',
   },
@@ -17,16 +17,14 @@ export const interviewNews = [
       'https://coingeek.com/wp-content/uploads/2020/01/lin-zheming-talks-incentivizing-email-with-bitcoin-sv-video-140x165.jpg',
     description:
       'Celebrities could have a whole new source of revenue: interacting with their fans through paid inboxes.',
-    url:
-      'https://coingeek.com/lin-zheming-talks-incentivizing-email-with-bitcoin-sv-video/',
+    url: 'h/lin-zheming-talks-incentivizing-email-with-bitcoin-sv-video/',
     category: 'Interviews',
     datetime: '11 January 2020',
   },
 ]
 
 export const podCast = {
-  url:
-    'https://coingeek.com/lawry-trevor-deutsch-a-greener-way-to-mine-bitcoin/',
+  url: '/lawry-trevor-deutsch-a-greener-way-to-mine-bitcoin/',
   image:
     'https://coingeek.com/wp-content/uploads/2019/12/lawry-trevor-deutsch-a-greener-way-to-mine-bitcoin_feat.jpg',
   title: 'Lawry Trevor-Deutsch: A greener way to mine Bitcoin',
@@ -34,7 +32,7 @@ export const podCast = {
 
 export const videos = {
   url:
-    'https://coingeek.com/video/jimmy-nguyen-talks-bitcoin-sv-and-how-its-changing-the-commerce-world-video/',
+    '/videos/jimmy-nguyen-talks-bitcoin-sv-and-how-its-changing-the-commerce-world-video/',
   videoUrl:
     'https://www.youtube-nocookie.com/embed/JWhYqucphQs?autoplay=0&modestbranding=1&rel=0&iv_load_policy=3&color=red',
   title:
