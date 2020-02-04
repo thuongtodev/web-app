@@ -1,19 +1,20 @@
 import classname from 'classnames'
 import Link from 'next/link'
+import CgLink from '../CgLink'
 import styles from './styles.scss'
 
 const SubMenu = props => {
-  const { items, isActive, activedItem } = props
+  const { items, isActive, activedItem, className } = props
   if (!Array.isArray(items) || items.length === 0) return null
 
   return (
     <ul
-      className={classname(styles.subMenu, {
+      className={classname(styles.subMenu, className, {
         [styles.actived]: isActive,
       })}
     >
       {items.map(item => {
-        const { title, url, children, key, isExternalSite } = item
+        const { title, url, children, key } = item
         const itemClasses = classname(styles.subMenuItem, {
           [styles.hasChildren]: children && children.length > 0,
           [styles.actived]: activedItem && activedItem.url === item.url,
@@ -21,28 +22,17 @@ const SubMenu = props => {
 
         return (
           <li className={itemClasses} key={key}>
-            {!isExternalSite && (
-              <Link href={url}>
-                <a>{title}</a>
-              </Link>
-            )}
-            {isExternalSite && <a href={url}>{title}</a>}
+            <CgLink href={url} title={title} />
             {children && children.length > 0 && (
               <ul className={styles.children}>
                 {children.map(child => {
                   return (
                     <li className={styles.child} key={child.key}>
-                      {isExternalSite && <a href={child.url}>{child.title}</a>}
-                      {!isExternalSite && child.dynamicPath && (
-                        <Link href={child.dynamicPath} as={child.url}>
-                          <a>{child.title}</a>
-                        </Link>
-                      )}
-                      {!isExternalSite && !child.dynamicPath && (
-                        <Link href={child.url}>
-                          <a>{child.title}</a>
-                        </Link>
-                      )}
+                      <CgLink
+                        href={child.url}
+                        title={child.title}
+                        query={child.query}
+                      />
                     </li>
                   )
                 })}

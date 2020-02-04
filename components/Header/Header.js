@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useMediaQuery } from 'react-responsive'
 import { FaSearch, FaShareAlt, FaTimes } from 'react-icons/fa'
 import SubMenu from '../SubMenu'
+import CgLink from '../CgLink'
 import LanguagesSelection from './components/LanguagesSelection'
 import { reducer } from '../../utils/functions'
 import {
@@ -97,21 +98,14 @@ const Header = () => {
           <nav className={styles.navigator}>
             <ul className={styles.mainMenu}>
               {cg_MENU.map(item => {
-                const {
-                  title,
-                  url,
-                  children,
-                  key,
-                  isExternalSite,
-                  color,
-                  isShow,
-                } = item
+                const { title, url, children, key, color, isShow } = item
                 const isLinkActived =
                   isOpenSubMenu === key ||
                   (activedItem &&
                     (activedItem.url === item.url ||
                       activedItem.parentUrl === item.url))
                 if (!isShow) return null
+
                 return (
                   <li
                     key={key}
@@ -125,21 +119,12 @@ const Header = () => {
                     onMouseOver={() => toggleSubMenu(key)}
                     onMouseOut={() => toggleSubMenu(null)}
                   >
-                    {!isExternalSite && (
-                      <Link href={url}>
-                        <a className={styles.a}>{title}</a>
-                      </Link>
-                    )}
-                    {isExternalSite && (
-                      <a href={url} className={styles.a}>
-                        {title}
-                      </a>
-                    )}
+                    <CgLink href={url} className={styles.a} title={title} />
                     {children && (
                       <SubMenu
                         items={children}
                         activedItem={activedItem}
-                        isActive={isLinkActived && !isOpenMenu}
+                        isActive={isLinkActived}
                       />
                     )}
                   </li>

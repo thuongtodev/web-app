@@ -60,7 +60,7 @@
         position: absolute;
         width: 280px;
         color: #343a40;
-        top: 42px;
+        top: 41px;
         opacity: 0;
         visibility: hidden;
         padding-left: 0;
@@ -109,6 +109,11 @@
   }
   transition: all 0.3s;
   &.actived {
+    transition: all 1s;
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover {
     transition: all 1s;
     visibility: visible;
     opacity: 1;

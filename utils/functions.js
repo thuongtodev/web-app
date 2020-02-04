@@ -10,6 +10,11 @@ export const parseHtmlString = htmlStr => {
   return parse(htmlStr)
 }
 
+export const checkHasDomain = urlStr => {
+  const regex = /^(https?):\/\/[^\s$.?#].[^\s]*$/gm
+  return regex.test(urlStr)
+}
+
 const DOMAIN = 'https://coingeek.com/'
 
 export const getInternalSlug = url => {

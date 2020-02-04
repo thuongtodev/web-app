@@ -97,8 +97,10 @@ const ArticlePage = props => {
                     {tags.map(item => (
                       <li key={item.slug}>
                         <Link
-                          href="/news/tag/[category]"
-                          as={`/news/tag/${item.slug}`}
+                          href={{
+                            pathname: '/news',
+                            query: { category: item.slug },
+                          }}
                         >
                           <a>{item.title}</a>
                         </Link>
