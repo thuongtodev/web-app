@@ -14,6 +14,7 @@ import cgLogoNews from '../../assets/cgLogoNews.svg'
 import styles from './styles.scss'
 import Link from 'next/link'
 import CgLink from '../CgLink'
+import { cg_SOCIALS } from '../../constants/common'
 
 const FooterHome = () => {
   return (
@@ -120,12 +121,12 @@ const FooterHome = () => {
           </div>
 
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="footer__social">
+            <div className={styles.footerSocial}>
               <h3 className={classNames(styles.h3, styles.textRight)}>
                 Follow us
               </h3>
               <ul className="nav justify-content-end">
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a
                     href="https://www.facebook.com/realcoingeek/"
                     target="_blank"
@@ -193,7 +194,23 @@ const FooterHome = () => {
                       className=" img-fluid lazyload-loaded"
                     />
                   </div> */}
-                </li>
+                {/* </li> */}
+                {cg_SOCIALS.map(item => {
+                  return (
+                    <li className={styles.socialItem} key={item.type}>
+                      <a
+                        href={item.url}
+                        className="nav-link text-dark"
+                        target="_blank"
+                      >
+                        {item.component}
+                      </a>
+                      {item.tooltip && (
+                        <div className={styles.tooltip}>{item.tooltip}</div>
+                      )}
+                    </li>
+                  )
+                })}
               </ul>
             </div>
 

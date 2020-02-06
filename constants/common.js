@@ -7,6 +7,7 @@ import {
   FaWeibo,
   FaWeixin,
 } from 'react-icons/fa'
+import cgWeixinQR from '../assets/cgWeixinQR.jpg'
 
 export const cg_SOCIALS = [
   {
@@ -44,12 +45,7 @@ export const cg_SOCIALS = [
     component: <FaWeixin />,
     url:
       'https://coingeek.com/wp-content/uploads/2019/08/qrcode_for_gh_906aba1be2b7_258.jpg',
-    tooltip: (
-      <img
-        src="https://cdn.shortpixel.ai/client/q_lqip,ret_wait/https://coingeek.com/wp-content/uploads/2019/08/qrcode_for_gh_906aba1be2b7_258.jpg"
-        className="img-fluid lazyload-observe"
-      />
-    ),
+    tooltip: <img src={cgWeixinQR} className="img-fluid lazyload-observe" />,
   },
 ]
 
