@@ -1,14 +1,10 @@
-FROM node:alpine
+FROM mhart/alpine-node
 
-RUN mkdir -p /opt/app
-RUN apk add --no-cache libc6-compat
-ENV NODE_ENV production
-ENV PORT 3000
+WORKDIR /app
+COPY . .
+
+RUN yarn install
+RUN yarn build
+
 EXPOSE 3000
-
-WORKDIR /opt/app
-COPY . /opt/app
-
-RUN npm install --no-optional && npm run build
-
-CMD [ "npm", "start" ]
+CMD ["yarn", "start"]
