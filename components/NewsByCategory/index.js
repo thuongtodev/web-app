@@ -27,7 +27,6 @@ const NewsByCategory = props => {
               justifyContent="center"
             />
           </main>
-          // TODO: implement pagination
         </div>
       </div>
     </div>
