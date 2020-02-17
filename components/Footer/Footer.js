@@ -19,6 +19,7 @@ const Footer = () => {
               >
                 <div className="col-12 col-md order-2 order-md-1">
                   <ul
+                    style={{ marginTop: 10 }}
                     id="menu-footer-menu-left"
                     className="nav flex-column flex-sm-row justify-content-around text-center"
                   >

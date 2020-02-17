@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BlockHeader from '../BlockHeader'
 import Article from '../Article'
+import Pagination from '../Pagination'
 
 const GridNews = props => {
   const {
@@ -12,6 +13,7 @@ const GridNews = props => {
     dynamicPath,
   } = props
   if (!news || !Array.isArray(news) || news.length < 1) return null
+  const [page, setPage] = useState(1)
 
   return (
     <>
@@ -32,6 +34,15 @@ const GridNews = props => {
             </div>
           )
         })}
+      </div>
+      <div className="container mb-4">
+        <div className="row align-items-start justify-content-center py-4">
+          <Pagination
+            totalPages={10}
+            page={page}
+            onChange={page => setPage(page)}
+          />
+        </div>
       </div>
     </>
   )
